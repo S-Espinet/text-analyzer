@@ -60,28 +60,24 @@ function numberOfOccurrencesOfWords(text) {
   }
   let textArray = text.split(" ");
   let i = 0;
-  let index = 0;
+  let wordsToBeListed = [];
   let mostUsedWords = [];
   textArray.forEach(function(word) {
-    console.log(word)
     if(word.includes(textArray[i])) {
-      console.log(textArray[i])
       mostUsedWords.push(textArray[i] + numberOfOccurrencesInText(textArray[i], text));
-      console.log(mostUsedWords);
     }
+    mostUsedWords.forEach(function(occurrence) {
+      if (occurrence.includes(wordInArray[i])) {
+        wordsToBeListed.push(occurrence);
+      }
+    });
     i ++
-    // return mostUsedWords;
   });
-  mostUsedWords.forEach(function(occurrence) {
-    if (occurrence === mostUsedWords[index + 1]) {
-      console.log(occurrence);
-      console.log(mostUsedWords[index]);
-      console.log("it did it !!");
-      return occurrence;
-    } else {
-      console.log("it made it to the else statement");
-    }
-  });
+  if (wordsToBeListed.length < 3) {
+    return;
+  } else {
+    $("#most-used-word").html(wordsToBeListed);
+  }
 }
 
 
