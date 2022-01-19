@@ -101,3 +101,30 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: "<p><b>hello</b> there</p>"
+
+
+Description: numberOfOccurrencesOfWords()
+
+Test: "It should return zero if field is blank."
+Code:
+const text: ""
+numberOfOccurrencesOfWords(text)
+Expected Output: 0
+
+Test: "It should loop through array and return index."
+Code:
+let index = 0;
+numberOfOccurrencesOfWords;
+Expected Output: length of array
+
+Test: "It should confirm that the loop is moving through the array in the correct order."
+Code:
+console.log(word);
+console.log(word2);
+Expected Output: length of array
+
+Test: "It should confirm that we're comparing each word to the rest of the array."
+Code:
+if (word === textArray[index+1]) {
+mostUsedWord ++;
+Expected Output: number or times a word is repeated

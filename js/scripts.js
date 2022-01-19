@@ -54,6 +54,36 @@ function boldPassage(word, text) {
   return htmlString + "</p>";
 }
 
+function numberOfOccurrencesOfWords(text) {
+  if (text.trim().length === 0) {
+    return 0;
+  }
+  let textArray = text.split(" ");
+  let i = 0;
+  let index = 0;
+  let mostUsedWords = [];
+  textArray.forEach(function(word) {
+    console.log(word)
+    if(word.includes(textArray[i])) {
+      console.log(textArray[i])
+      mostUsedWords.push(textArray[i] + numberOfOccurrencesInText(textArray[i], text));
+      console.log(mostUsedWords);
+    }
+    i ++
+    // return mostUsedWords;
+  });
+  mostUsedWords.forEach(function(occurrence) {
+    if (occurrence === mostUsedWords[index + 1]) {
+      console.log(occurrence);
+      console.log(mostUsedWords[index]);
+      console.log("it did it !!");
+      return occurrence;
+    } else {
+      console.log("it made it to the else statement");
+    }
+  });
+}
+
 
 // UI Logic
 
@@ -67,6 +97,6 @@ $(document).ready(function(){
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
     $("#bolded-passage").html(boldPassage(word, passage));
+    $("#most-used-word").html(numberOfOccurrencesOfWords(passage));
   });
 });
-
