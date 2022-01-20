@@ -54,31 +54,10 @@ function boldPassage(word, text) {
   return htmlString + "</p>";
 }
 
-function numberOfOccurrencesOfWords(text) {
-  if (text.trim().length === 0) {
-    return 0;
-  }
-  let textArray = text.split(" ");
-  let i = 0;
-  let wordsToBeListed = [];
-  let mostUsedWords = [];
-  textArray.forEach(function(word) {
-    if(word.includes(textArray[i])) {
-      mostUsedWords.push(textArray[i] + numberOfOccurrencesInText(textArray[i], text));
-    }
-    mostUsedWords.forEach(function(occurrence) {
-      if (occurrence.includes(wordInArray[i])) {
-        wordsToBeListed.push(occurrence);
-      }
-    });
-    i ++
-  });
-  if (wordsToBeListed.length < 3) {
-    return;
-  } else {
-    $("#most-used-word").html(wordsToBeListed);
-  }
+function mostCommonWords(text) {
+  return "";
 }
+
 
 
 // UI Logic
