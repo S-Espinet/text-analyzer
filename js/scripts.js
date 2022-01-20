@@ -57,9 +57,17 @@ function boldPassage(word, text) {
 function mostCommonWords(text) {
   if (text !== "") {
     let textArray = text.split(" ");
+    let uniqueTextArray = [];
+    //Fill uniqueTextArray with elements from textArray if they are not already included in uniqueTextArray.
+    textArray.forEach(function(word){
+      if (uniqueTextArray.includes(word) === false) {
+        uniqueTextArray.push(word);
+      }
+    });
     let outputArray = [];
-    textArray.forEach(function(word) {
-       outputArray.push(word + ": 1");
+    uniqueTextArray.forEach(function(word) {
+      let occurrences = numberOfOccurrencesInText(word, text);
+      outputArray.push(word + ": " + occurrences);
     });
     return outputArray;
   }

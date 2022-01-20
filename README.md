@@ -118,3 +118,8 @@ Test: "It should return the inputted words when the passage contains exactly two
 Code: const text = "hello world";
 mostCommonWords(text);
 Expected Output: ["hello: 1", "world: 1"]
+
+Test: "It should return the inputted text followed by the number of occurrences of each word."
+Code: const text = "hello hello";
+mostCommonWords(text);
+Expected Output: ["hello: 2"]
