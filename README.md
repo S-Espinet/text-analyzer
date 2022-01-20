@@ -112,4 +112,9 @@ Expected Output: ""
 Test: "It should return the inputted word when the passage is one word, followed by the number of occurrences."
 Code: const text = "hello";
 mostCommonWords(text);
-Expected Output: hello: 1
+Expected Output: ["hello: 1"]
+
+Test: "It should return the inputted words when the passage contains exactly two different words, followed by the number of occurrences."
+Code: const text = "hello world";
+mostCommonWords(text);
+Expected Output: ["hello: 1", "world: 1"]

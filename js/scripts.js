@@ -56,7 +56,12 @@ function boldPassage(word, text) {
 
 function mostCommonWords(text) {
   if (text !== "") {
-  return text + ": 1";
+    let textArray = text.split(" ");
+    let outputArray = [];
+    textArray.forEach(function(word) {
+       outputArray.push(word + ": 1");
+    });
+    return outputArray;
   }
   else {
     return "";
@@ -77,6 +82,6 @@ $(document).ready(function(){
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
     $("#bolded-passage").html(boldPassage(word, passage));
-    $("#most-used-word").html(numberOfOccurrencesOfWords(passage));
+    $("#most-used-word").html(mostCommonWords(passage));
   });
 });
