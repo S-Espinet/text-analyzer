@@ -55,7 +55,12 @@ function boldPassage(word, text) {
 }
 
 function mostCommonWords(text) {
-  return "";
+  if (text !== "") {
+  return text + ": 1";
+  }
+  else {
+    return "";
+  }
 }
 
 

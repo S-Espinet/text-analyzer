@@ -108,3 +108,8 @@ Describe: mostCommonWords()
 Test: "It should return an empty string when the passage is empty."
 Code: mostCommonWords("");
 Expected Output: ""
+
+Test: "It should return the inputted word when the passage is one word, followed by the number of occurrences."
+Code: const text = "hello";
+mostCommonWords(text);
+Expected Output: hello: 1
